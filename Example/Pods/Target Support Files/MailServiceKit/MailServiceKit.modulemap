@@ -1,0 +1,6 @@
+framework module MailServiceKit {
+  umbrella header "MailServiceKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

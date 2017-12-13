@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/MailServiceKit.svg?style=flat)](http://cocoapods.org/pods/MailServiceKit)
 [![Platform](https://img.shields.io/cocoapods/p/MailServiceKit.svg?style=flat)](http://cocoapods.org/pods/MailServiceKit)
 
+Work in Progress
+
+Manage users, lists and send (transactional) emails on iOS with Intercom, Mailchimp, SendinBlue and Sendgrid
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
