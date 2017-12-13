@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MailServiceKit_Example' do
+  pod 'MailServiceKit', :path => '../'
+
+  target 'MailServiceKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
