@@ -42,9 +42,12 @@ internal class SendinblueService {
         }
         
         // URLSession > send request to server
-        URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+        URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
+            print(response)
+            print(data)
+            print(error)
+            
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
                 completion(error, jsonData)
             } catch let e {

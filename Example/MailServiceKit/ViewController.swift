@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MailService
+import MailServiceKit
 
 class ViewController: UIViewController {
     
@@ -16,10 +16,11 @@ class ViewController: UIViewController {
         
         
         
-        let mailservice = MailService(apiKey: "", provider: .sendinblue)
+        
+        let sendinblue = MailService(provider: .sendinblue)
         
         // Send transactional emails
-        mailservice.sendEmail(sender: MailContact(email: "test@test.com", fullname: "Josef Moser"),
+        sendinblue.sendEmail(sender: MailContact(email: "test@test.com", fullname: "Josef Moser"),
                               recipients: [MailContact(email: "test@josefmoser.de", fullname: "Josef Moser")],
                               subject: "Test",
                               content: "This is a test email sent from MailServiceKit") { (error, result) in

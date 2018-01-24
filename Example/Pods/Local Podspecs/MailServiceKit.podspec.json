@@ -1,7 +1,7 @@
 {
   "name": "MailServiceKit",
   "version": "0.1.0",
-  "summary": "A short description of MailServiceKit.",
+  "summary": "Manage newsletters and send transactional email using Intercom, Mailchimp, Sendgrid and SendinBlue",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/caloon/MailServiceKit",
   "license": {
@@ -15,8 +15,9 @@
     "git": "https://github.com/caloon/MailServiceKit.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/josef_moser",
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "MailServiceKit/Classes/**/*"
 }

@@ -8,8 +8,9 @@
 
 import Foundation
 
+public typealias MailServiceClosure = (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void
 
-enum MailServiceProvider: String {
+public enum MailServiceProvider: String {
     case intercom = "intercom"
     case mailchimp = "mailchimp"
     case sendinblue = "sendinblue"
@@ -17,58 +18,58 @@ enum MailServiceProvider: String {
 }
 
 
-enum MailServiceError: Error {
+public enum MailServiceError: Error {
     case missingAPIKey, missingProvider, listRequired, unimplemented
 }
 
-open class MailContact {
+public class MailContact {
     var email: String
     var fullname: String
     
-    init(email: String, fullname: String) {
+    public init(email: String, fullname: String) {
         self.email = email
         self.fullname = fullname
     }
 }
 
-
-open class MailService {
+public class MailService {
     
     private let mailchimpURL = "https://us16.api.mailchimp.com/3.0/lists/"
     private let sendinblueURL = "https://api.sendinblue.com/v2.0/"
     
-    private /*lazy*/ var apiKey: String?
-    //        = { // TODO - save API Key to keychain
-    //        if let key = ContactDefaults.standard.string(forKey: "MailServiceKit.APIKey") {
-    //            return key
-    //        }
-    //        return nil
-    //    }()
-    private /*lazy*/ var provider: MailServiceProvider?
-    //        = {
-    //        if let serviceProvider = ContactDefaults.standard.string(forKey: "MailServiceKit.Provider") {
-    //            return MailServiceProvider(rawValue: serviceProvider)
-    //        }
-    //        return nil
-    //    }()
-    
-    
-    init(apiKey: String, provider: MailServiceProvider) {
-        self.apiKey = apiKey // ContactDefaults.standard.set(apiKey, forKey: "MailServiceKit.APIKey")
-        self.provider = provider // ContactDefaults.standard.set(provider.rawValue, forKey: "MailServiceKit.Provider")
+    private /*lazy*/ var apiKey: String? {
+        if provider != nil {
+            if let key = Keychain.load(service: provider!.rawValue) {
+                print(key)
+                return key
+            }
+        }
+        return nil
     }
     
+    private /*lazy*/ var provider: MailServiceProvider?
     
-    func sendEmail(sender: MailContact, recipients: [MailContact], subject: String, content: String, completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    
+    // -----------
+    
+    public class func with(provider: MailServiceProvider, apiKey: String) {
+        Keychain.save(service: provider.rawValue, data: apiKey)
+    }
+    
+    // -----------
+    
+    public init(provider: MailServiceProvider) {
+        self.provider = provider
+    }
+    
+    // -----------
+    
+    public func sendEmail(sender: MailContact, recipients: [MailContact], subject: String, content: String, completion: @escaping MailServiceClosure) {
         
-        if apiKey == nil {
-            completion(MailServiceError.missingAPIKey, nil)
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
             
-        } else if provider == nil {
-            completion(MailServiceError.missingProvider, nil)
-            
-        } else {
-            
+        else {
             switch provider! {
                 
             case .sendinblue:
@@ -81,16 +82,12 @@ open class MailService {
         }
     }
     
-    func getContacts(completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    public func getContacts(completion: @escaping MailServiceClosure) {
         
-        if apiKey == nil {
-            completion(MailServiceError.missingAPIKey, nil)
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
             
-        } else if provider == nil {
-            completion(MailServiceError.missingProvider, nil)
-            
-        } else {
-            
+        else {
             switch provider! {
                 
             case .sendinblue:
@@ -104,16 +101,12 @@ open class MailService {
     }
     
     
-    func getContact(email: String, completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+   public func getContact(email: String, completion: @escaping MailServiceClosure) {
         
-        if apiKey == nil {
-            completion(MailServiceError.missingAPIKey, nil)
-            
-        } else if provider == nil {
-            completion(MailServiceError.missingProvider, nil)
-            
-        } else {
-            
+    if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+    else if provider == nil { completion(MailServiceError.missingProvider, nil) }
+        
+    else {
             switch provider! {
                 
             case .sendinblue:
@@ -126,17 +119,12 @@ open class MailService {
         }
     }
     
-    func addContact(email: String, attributes: Dictionary<String, Any>?, lists: Array<String>?, completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    public func addContact(email: String, attributes: Dictionary<String, Any>?, lists: Array<String>?, completion: @escaping MailServiceClosure) {
         
-        
-        if apiKey == nil {
-            completion(MailServiceError.missingAPIKey, nil)
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
             
-        } else if provider == nil {
-            completion(MailServiceError.missingProvider, nil)
-            
-        } else {
-            
+        else {
             switch provider! {
                 
             case .sendinblue:
@@ -149,16 +137,12 @@ open class MailService {
         }
     }
     
-    func updateContact(email: String, attributes: Dictionary<String, Any>?, lists: Array<String>?, completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    public func updateContact(email: String, attributes: Dictionary<String, Any>?, lists: Array<String>?, completion: @escaping MailServiceClosure) {
 
-        if apiKey == nil {
-            completion(MailServiceError.missingAPIKey, nil)
-            
-        } else if provider == nil {
-            completion(MailServiceError.missingProvider, nil)
-            
-        } else {
-            
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
+        
+        else {
             switch provider! {
                 
             case .sendinblue:
@@ -171,19 +155,32 @@ open class MailService {
         }
     }
     
-    
-    
-    func getLists(completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    public func subscribe(contact: String, list: Int, completion: @escaping MailServiceClosure) {
         
-        if apiKey == nil {
-            completion(MailServiceError.missingAPIKey, nil)
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
             
-        } else if provider == nil {
-            completion(MailServiceError.missingProvider, nil)
+        else {
             
-        } else {
+        }
+    }
+    
+    public func unsubscribe(contact: String, list: Int, completion: @escaping MailServiceClosure) {
+        
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
             
+        else {
             
+        }
+    }
+    
+    public func getLists(completion: @escaping MailServiceClosure) {
+        
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
+            
+        else {
             switch provider! {
                 
             case .sendinblue:
@@ -196,17 +193,12 @@ open class MailService {
         }
     }
     
-    func getList(id: Int, completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    public func getList(id: Int, completion: @escaping MailServiceClosure) {
         
-        if apiKey == nil {
-            completion(MailServiceError.missingAPIKey, nil)
+        if apiKey == nil { completion(MailServiceError.missingAPIKey, nil) }
+        else if provider == nil { completion(MailServiceError.missingProvider, nil) }
             
-        } else if provider == nil {
-            completion(MailServiceError.missingProvider, nil)
-            
-        } else {
-            
-            
+        else {
             switch provider! {
                 
             case .sendinblue:
@@ -227,7 +219,7 @@ open class MailService {
     
     
     
-    private func addMailchimpContact(email: String, attributes: Dictionary<String, Any>?, lists: Array<String>?, completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    private func addMailchimpContact(email: String, attributes: Dictionary<String, Any>?, lists: Array<String>?, completion: @escaping MailServiceClosure) {
         
         // create params
         var params = [String: Any]()
@@ -280,7 +272,7 @@ open class MailService {
         
     }
     
-    private func getMailchimpLists(completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+    private func getMailchimpLists(completion: @escaping MailServiceClosure) {
         completion(nil, nil)
     }
 }

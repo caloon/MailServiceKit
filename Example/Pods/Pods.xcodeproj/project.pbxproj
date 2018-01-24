@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		048ECCDB15CF8C5B49E50E15EAE03E1E /* Pods-MailServiceKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F49D3B691E415F4BAD439AEA05ACA45A /* Pods-MailServiceKit_Tests-dummy.m */; };
 		348FE787B6433AE6D717A821DD9E5639 /* Pods-MailServiceKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE257065707E9C861AADF9BB32832912 /* Pods-MailServiceKit_Example-dummy.m */; };
+		3B14FDEA1C7A3E59B375A2DD6C2A3BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		3B5A14EAA5E745DE95F0BD4021C6C48C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		488B71DACA2AA6D387DC076517B0143B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		48D3986FC2BECE37D5CE3E1FF4220D13 /* Pods-MailServiceKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E1CDE9A416346AA53CB0005A9236FC7 /* Pods-MailServiceKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		966D13B41FE169520092FBEC /* SendinblueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D13B21FE169520092FBEC /* SendinblueService.swift */; };
-		966D13B51FE169520092FBEC /* MailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D13B31FE169520092FBEC /* MailService.swift */; };
+		59CB730ABCE0A0C23A3D9A11895B4262 /* MailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9298B9AFB38A23AEBC448794354C7 /* MailService.swift */; };
+		6AEA042836BD56F1E88211C87B116650 /* MailServiceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E7525447C43ED3D09929618D8019E /* MailServiceKit-dummy.m */; };
+		805C462D2744C3CD9872E121AE4BCE89 /* SendinblueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B8AF7FDCDDAEFEBA0F57B8313D5A7 /* SendinblueService.swift */; };
 		968D36555CC1A5F9ED3CD92807E6AB56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		A2218FE38DE740F6AD1012A2F6F96AB7 /* MailServiceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A5EE3699937052B1F80A2AB4BA546D7 /* MailServiceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96EA9E532018B52000218CD2 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EA9E522018B52000218CD2 /* Keychain.swift */; };
+		9D3A56C06C89BF05FB21866E08D14664 /* MailServiceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFDD43666AC3883028E1A9DF16587567 /* MailServiceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6483CAB441870029DFD28394A1B0CA3 /* Pods-MailServiceKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F31D0FD2C17107231BD66BAD714C014 /* Pods-MailServiceKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA8729024FABBF64B204FEFBFE62FEA5 /* MailServiceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF35985D5A70ACDA894A066297EEB42E /* MailServiceKit-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +26,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0F953F7FED05C7BF8C04C7C50A24CAED;
+			remoteGlobalIDString = AAEC1103995442EC48C4E07056F7BBA1;
 			remoteInfo = MailServiceKit;
 		};
 /* End PBXContainerItemProxy section */
@@ -35,26 +36,25 @@
 		077945BE07334DB3D9544B0976EF61E7 /* Pods-MailServiceKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailServiceKit_Example-resources.sh"; sourceTree = "<group>"; };
 		1534A461E52EA1EBED02042601B1ED84 /* Pods-MailServiceKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MailServiceKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1F31D0FD2C17107231BD66BAD714C014 /* Pods-MailServiceKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MailServiceKit_Example-umbrella.h"; sourceTree = "<group>"; };
+		215234EA8CBB5296FF9B6E5ECA0E7C15 /* MailServiceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MailServiceKit.xcconfig; sourceTree = "<group>"; };
 		2427C5D583FD73E33C03DE0676C561E4 /* Pods-MailServiceKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MailServiceKit_Example.modulemap"; sourceTree = "<group>"; };
+		246E7525447C43ED3D09929618D8019E /* MailServiceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MailServiceKit-dummy.m"; sourceTree = "<group>"; };
 		259695A719DA50CAB107F0D7AC20FD2B /* Pods-MailServiceKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MailServiceKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3922307412A01EC47E560B9B2331865D /* Pods-MailServiceKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailServiceKit_Tests-resources.sh"; sourceTree = "<group>"; };
-		409C7180FD91A256372B36EC17179F8C /* MailServiceKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MailServiceKit.xcconfig; sourceTree = "<group>"; };
-		43FAB4DFB170BC7D3CF2CD1A65F423DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FB9733F253A99A1C2B883BD6F4A9BC /* MailServiceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MailServiceKit-prefix.pch"; sourceTree = "<group>"; };
 		47C3047DD3C51AF86DCC4B74273CDC42 /* Pods-MailServiceKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MailServiceKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4EE329E4DF3220C2BA016934A037F762 /* Pods-MailServiceKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailServiceKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		5B609557D774999D17A480CBDB6739E9 /* MailServiceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MailServiceKit.modulemap; sourceTree = "<group>"; };
 		5EB89CEF99C0CC1EE86CEA6AB77F5F06 /* Pods-MailServiceKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MailServiceKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7A5EE3699937052B1F80A2AB4BA546D7 /* MailServiceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MailServiceKit-umbrella.h"; sourceTree = "<group>"; };
 		8E1CDE9A416346AA53CB0005A9236FC7 /* Pods-MailServiceKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MailServiceKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		950AEFDF7FABC693958913E0B4F1717B /* Pods_MailServiceKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MailServiceKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		966D13B21FE169520092FBEC /* SendinblueService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendinblueService.swift; path = MailServiceKit/Classes/SendinblueService.swift; sourceTree = "<group>"; };
-		966D13B31FE169520092FBEC /* MailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailService.swift; path = MailServiceKit/Classes/MailService.swift; sourceTree = "<group>"; };
+		96EA9E522018B52000218CD2 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = MailServiceKit/Classes/Keychain.swift; sourceTree = "<group>"; };
+		AEC7214FB538EF1538A3988B6B92D58E /* MailServiceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MailServiceKit.modulemap; sourceTree = "<group>"; };
 		B7740D9E15D47A70B8B2F90F14E5A9A0 /* Pods-MailServiceKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MailServiceKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B95AFF7DE4C4303F75CC1EFF01731FDB /* Pods-MailServiceKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailServiceKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		BF35985D5A70ACDA894A066297EEB42E /* MailServiceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MailServiceKit-dummy.m"; sourceTree = "<group>"; };
-		CD18CF26426D2CC237E59555BDD417A8 /* MailServiceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MailServiceKit-prefix.pch"; sourceTree = "<group>"; };
+		C0335B3F91CD26BE0B7C5AFEEE6A179B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6B8AF7FDCDDAEFEBA0F57B8313D5A7 /* SendinblueService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SendinblueService.swift; path = MailServiceKit/Classes/SendinblueService.swift; sourceTree = "<group>"; };
 		D291D77691232C2C11894D792FDA6AF5 /* Pods_MailServiceKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MailServiceKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A13B7C93213F5C043FB499482B71DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC42406F10FF871BE13A26CD95098F7C /* MailServiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MailServiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,19 +62,13 @@
 		DE257065707E9C861AADF9BB32832912 /* Pods-MailServiceKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MailServiceKit_Example-dummy.m"; sourceTree = "<group>"; };
 		F49D3B691E415F4BAD439AEA05ACA45A /* Pods-MailServiceKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MailServiceKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		F6AE2AD1C337DC00E68C760D3A397257 /* Pods-MailServiceKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MailServiceKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F7E9298B9AFB38A23AEBC448794354C7 /* MailService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MailService.swift; path = MailServiceKit/Classes/MailService.swift; sourceTree = "<group>"; };
 		F85883BDEE854349999C886E3315216D /* Pods-MailServiceKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MailServiceKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF059657A1EF1CEB2C708E3162D52BCA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFDD43666AC3883028E1A9DF16587567 /* MailServiceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MailServiceKit-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1469256B3C2F91A1B2FEA4D7C764A647 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				488B71DACA2AA6D387DC076517B0143B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1DE1C5C0856FB67798646F3A393B9376 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,9 +85,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7FE50F7F8FD6C7D8CE51E1C831958F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B14FDEA1C7A3E59B375A2DD6C2A3BAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0092A50B74DDE07C646A7E7AFCE8F174 /* MailServiceKit */ = {
+			isa = PBXGroup;
+			children = (
+				F7E9298B9AFB38A23AEBC448794354C7 /* MailService.swift */,
+				CE6B8AF7FDCDDAEFEBA0F57B8313D5A7 /* SendinblueService.swift */,
+				96EA9E522018B52000218CD2 /* Keychain.swift */,
+				2E121F9161835BE955972F1567CD20A5 /* Support Files */,
+			);
+			name = MailServiceKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		0E5CAC1AB5E4D2666BB8FC6171FE850A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0092A50B74DDE07C646A7E7AFCE8F174 /* MailServiceKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		1067AF77A7260C026C4DBC9650259951 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,20 @@
 				950AEFDF7FABC693958913E0B4F1717B /* Pods_MailServiceKit_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2E121F9161835BE955972F1567CD20A5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0335B3F91CD26BE0B7C5AFEEE6A179B /* Info.plist */,
+				AEC7214FB538EF1538A3988B6B92D58E /* MailServiceKit.modulemap */,
+				215234EA8CBB5296FF9B6E5ECA0E7C15 /* MailServiceKit.xcconfig */,
+				246E7525447C43ED3D09929618D8019E /* MailServiceKit-dummy.m */,
+				45FB9733F253A99A1C2B883BD6F4A9BC /* MailServiceKit-prefix.pch */,
+				FFDD43666AC3883028E1A9DF16587567 /* MailServiceKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MailServiceKit";
 			sourceTree = "<group>";
 		};
 		44D92DFE2F5C1D06E1BB88F0EBD4CC65 /* Pods-MailServiceKit_Tests */ = {
@@ -135,44 +171,11 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				AD0DCC32BF4FB2A72E5AD0018966F5E6 /* Development Pods */,
+				0E5CAC1AB5E4D2666BB8FC6171FE850A /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				1067AF77A7260C026C4DBC9650259951 /* Products */,
 				5BA00FAD40AD862BD9F6865B94BF6EA3 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		92F064DE19A67BEA1C56630E13DE1637 /* MailServiceKit */ = {
-			isa = PBXGroup;
-			children = (
-				966D13B31FE169520092FBEC /* MailService.swift */,
-				966D13B21FE169520092FBEC /* SendinblueService.swift */,
-				99BD241934D8D06BAA05ADD0052C8BA8 /* Support Files */,
-			);
-			name = MailServiceKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		99BD241934D8D06BAA05ADD0052C8BA8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				43FAB4DFB170BC7D3CF2CD1A65F423DA /* Info.plist */,
-				5B609557D774999D17A480CBDB6739E9 /* MailServiceKit.modulemap */,
-				409C7180FD91A256372B36EC17179F8C /* MailServiceKit.xcconfig */,
-				BF35985D5A70ACDA894A066297EEB42E /* MailServiceKit-dummy.m */,
-				CD18CF26426D2CC237E59555BDD417A8 /* MailServiceKit-prefix.pch */,
-				7A5EE3699937052B1F80A2AB4BA546D7 /* MailServiceKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MailServiceKit";
-			sourceTree = "<group>";
-		};
-		AD0DCC32BF4FB2A72E5AD0018966F5E6 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				92F064DE19A67BEA1C56630E13DE1637 /* MailServiceKit */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -212,11 +215,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0514C756B22FB6727FFEA1ACBD00956C /* Headers */ = {
+		886B28552603376B5A6439AEDFB46F4C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2218FE38DE740F6AD1012A2F6F96AB7 /* MailServiceKit-umbrella.h in Headers */,
+				9D3A56C06C89BF05FB21866E08D14664 /* MailServiceKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,23 +242,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0F953F7FED05C7BF8C04C7C50A24CAED /* MailServiceKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 77310050512F30FF6C648AF729063EF7 /* Build configuration list for PBXNativeTarget "MailServiceKit" */;
-			buildPhases = (
-				B002E361C0810CB6C3D3600477002E2B /* Sources */,
-				1469256B3C2F91A1B2FEA4D7C764A647 /* Frameworks */,
-				0514C756B22FB6727FFEA1ACBD00956C /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MailServiceKit;
-			productName = MailServiceKit;
-			productReference = DC42406F10FF871BE13A26CD95098F7C /* MailServiceKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		488C73B60CD63C9F799E55E09C6242D9 /* Pods-MailServiceKit_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C548D4D3D8C1EEFDF703BDED53097D9 /* Build configuration list for PBXNativeTarget "Pods-MailServiceKit_Tests" */;
@@ -271,6 +257,23 @@
 			name = "Pods-MailServiceKit_Tests";
 			productName = "Pods-MailServiceKit_Tests";
 			productReference = 950AEFDF7FABC693958913E0B4F1717B /* Pods_MailServiceKit_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AAEC1103995442EC48C4E07056F7BBA1 /* MailServiceKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 417343395CA844E8C7C7F82391CCFD65 /* Build configuration list for PBXNativeTarget "MailServiceKit" */;
+			buildPhases = (
+				07CF114D2D2007493C8BB86D74F34A4E /* Sources */,
+				E7FE50F7F8FD6C7D8CE51E1C831958F9 /* Frameworks */,
+				886B28552603376B5A6439AEDFB46F4C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MailServiceKit;
+			productName = MailServiceKit;
+			productReference = DC42406F10FF871BE13A26CD95098F7C /* MailServiceKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E6AB4715A6B42E6934B6113DA289561E /* Pods-MailServiceKit_Example */ = {
@@ -299,11 +302,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					0F953F7FED05C7BF8C04C7C50A24CAED = {
-						LastSwiftMigration = 0910;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -317,7 +315,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F953F7FED05C7BF8C04C7C50A24CAED /* MailServiceKit */,
+				AAEC1103995442EC48C4E07056F7BBA1 /* MailServiceKit */,
 				E6AB4715A6B42E6934B6113DA289561E /* Pods-MailServiceKit_Example */,
 				488C73B60CD63C9F799E55E09C6242D9 /* Pods-MailServiceKit_Tests */,
 			);
@@ -325,6 +323,17 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07CF114D2D2007493C8BB86D74F34A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59CB730ABCE0A0C23A3D9A11895B4262 /* MailService.swift in Sources */,
+				96EA9E532018B52000218CD2 /* Keychain.swift in Sources */,
+				6AEA042836BD56F1E88211C87B116650 /* MailServiceKit-dummy.m in Sources */,
+				805C462D2744C3CD9872E121AE4BCE89 /* SendinblueService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		397AE8CE941038299DF15E1F2E7C2FEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,29 +350,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B002E361C0810CB6C3D3600477002E2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				966D13B51FE169520092FBEC /* MailService.swift in Sources */,
-				966D13B41FE169520092FBEC /* SendinblueService.swift in Sources */,
-				EA8729024FABBF64B204FEFBFE62FEA5 /* MailServiceKit-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		791B5511B91CEBC9E444B57128001505 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MailServiceKit;
-			target = 0F953F7FED05C7BF8C04C7C50A24CAED /* MailServiceKit */;
+			target = AAEC1103995442EC48C4E07056F7BBA1 /* MailServiceKit */;
 			targetProxy = 651BE1E71CF070CC1BBFF18471B6F125 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0E3864084F7307529C3C172A847D9B32 /* Release */ = {
+		0633CF890D3E8F1AD0916FCFF1771F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6AE2AD1C337DC00E68C760D3A397257 /* Pods-MailServiceKit_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MailServiceKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MailServiceKit_Example/Pods-MailServiceKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MailServiceKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0D650897D26F7EBC84340B1552136139 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1534A461E52EA1EBED02042601B1ED84 /* Pods-MailServiceKit_Example.release.xcconfig */;
 			buildSettings = {
@@ -378,7 +411,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-MailServiceKit_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MailServiceKit_Example/Pods-MailServiceKit_Example.modulemap";
@@ -397,9 +430,41 @@
 			};
 			name = Release;
 		};
-		3141CBC522EDAC06AB5E0105674B1803 /* Debug */ = {
+		294E6AC5ED74F5F6E6382732AA65AE28 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F85883BDEE854349999C886E3315216D /* Pods-MailServiceKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 215234EA8CBB5296FF9B6E5ECA0E7C15 /* MailServiceKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MailServiceKit/MailServiceKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MailServiceKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MailServiceKit/MailServiceKit.modulemap";
+				PRODUCT_NAME = MailServiceKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7019AC16EF030407FC0E5915F00E276D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB3D2BC67A9DFA98D60FFA9CFECC48C /* Pods-MailServiceKit_Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -412,7 +477,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-MailServiceKit_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MailServiceKit_Tests/Pods-MailServiceKit_Tests.modulemap";
@@ -424,12 +489,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -478,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,45 +555,10 @@
 			};
 			name = Debug;
 		};
-		4630CFF3C52EA91A2F348A3E2F0F4789 /* Debug */ = {
+		7C9D2AB84F45CEF7EFC70742940E2A86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6AE2AD1C337DC00E68C760D3A397257 /* Pods-MailServiceKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 215234EA8CBB5296FF9B6E5ECA0E7C15 /* MailServiceKit.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MailServiceKit_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MailServiceKit_Example/Pods-MailServiceKit_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MailServiceKit_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		58895D4CAA4DA6768D26EA81A12A1BD8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 409C7180FD91A256372B36EC17179F8C /* MailServiceKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -540,23 +571,22 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MailServiceKit/MailServiceKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MailServiceKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MailServiceKit/MailServiceKit.modulemap";
 				PRODUCT_NAME = MailServiceKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
+		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -602,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
@@ -611,9 +641,9 @@
 			};
 			name = Release;
 		};
-		9A75BC282439C1275C083EAC170E9DD6 /* Release */ = {
+		C77C8D2B5050BE291E76EB9D03D4651E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCB3D2BC67A9DFA98D60FFA9CFECC48C /* Pods-MailServiceKit_Tests.release.xcconfig */;
+			baseConfigurationReference = F85883BDEE854349999C886E3315216D /* Pods-MailServiceKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -626,7 +656,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-MailServiceKit_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MailServiceKit_Tests/Pods-MailServiceKit_Tests.modulemap";
@@ -637,39 +667,6 @@
 				PRODUCT_NAME = Pods_MailServiceKit_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C845F8481627A5066940BFA99989786C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 409C7180FD91A256372B36EC17179F8C /* MailServiceKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MailServiceKit/MailServiceKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MailServiceKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MailServiceKit/MailServiceKit.modulemap";
-				PRODUCT_NAME = MailServiceKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -682,8 +679,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
-				731DC216E1A58545B559F6E0A2418060 /* Release */,
+				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
+				98F29E7567052F62660DDD7069ADF73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -691,17 +688,17 @@
 		3C548D4D3D8C1EEFDF703BDED53097D9 /* Build configuration list for PBXNativeTarget "Pods-MailServiceKit_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3141CBC522EDAC06AB5E0105674B1803 /* Debug */,
-				9A75BC282439C1275C083EAC170E9DD6 /* Release */,
+				C77C8D2B5050BE291E76EB9D03D4651E /* Debug */,
+				7019AC16EF030407FC0E5915F00E276D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77310050512F30FF6C648AF729063EF7 /* Build configuration list for PBXNativeTarget "MailServiceKit" */ = {
+		417343395CA844E8C7C7F82391CCFD65 /* Build configuration list for PBXNativeTarget "MailServiceKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C845F8481627A5066940BFA99989786C /* Debug */,
-				58895D4CAA4DA6768D26EA81A12A1BD8 /* Release */,
+				7C9D2AB84F45CEF7EFC70742940E2A86 /* Debug */,
+				294E6AC5ED74F5F6E6382732AA65AE28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -709,8 +706,8 @@
 		9BCE9FA38CCA18D78A214978CFFCAA8E /* Build configuration list for PBXNativeTarget "Pods-MailServiceKit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4630CFF3C52EA91A2F348A3E2F0F4789 /* Debug */,
-				0E3864084F7307529C3C172A847D9B32 /* Release */,
+				0633CF890D3E8F1AD0916FCFF1771F31 /* Debug */,
+				0D650897D26F7EBC84340B1552136139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
