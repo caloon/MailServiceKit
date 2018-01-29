@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MailServiceKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.1'
   s.summary          = 'Manage newsletters and send transactional email using Intercom, Mailchimp, Sendgrid and SendinBlue'
 
 # This description is used to generate tags and improve search results.

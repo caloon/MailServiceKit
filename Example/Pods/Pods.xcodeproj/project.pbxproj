@@ -16,6 +16,7 @@
 		6AEA042836BD56F1E88211C87B116650 /* MailServiceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E7525447C43ED3D09929618D8019E /* MailServiceKit-dummy.m */; };
 		805C462D2744C3CD9872E121AE4BCE89 /* SendinblueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B8AF7FDCDDAEFEBA0F57B8313D5A7 /* SendinblueService.swift */; };
 		968D36555CC1A5F9ED3CD92807E6AB56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		96DC52B42019DA59002B80C4 /* MailchimpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC52B32019DA59002B80C4 /* MailchimpService.swift */; };
 		96EA9E532018B52000218CD2 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EA9E522018B52000218CD2 /* Keychain.swift */; };
 		9D3A56C06C89BF05FB21866E08D14664 /* MailServiceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFDD43666AC3883028E1A9DF16587567 /* MailServiceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6483CAB441870029DFD28394A1B0CA3 /* Pods-MailServiceKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F31D0FD2C17107231BD66BAD714C014 /* Pods-MailServiceKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +50,7 @@
 		8E1CDE9A416346AA53CB0005A9236FC7 /* Pods-MailServiceKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MailServiceKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		950AEFDF7FABC693958913E0B4F1717B /* Pods_MailServiceKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MailServiceKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96DC52B32019DA59002B80C4 /* MailchimpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MailchimpService.swift; path = MailServiceKit/Classes/MailchimpService.swift; sourceTree = "<group>"; };
 		96EA9E522018B52000218CD2 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = MailServiceKit/Classes/Keychain.swift; sourceTree = "<group>"; };
 		AEC7214FB538EF1538A3988B6B92D58E /* MailServiceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MailServiceKit.modulemap; sourceTree = "<group>"; };
 		B7740D9E15D47A70B8B2F90F14E5A9A0 /* Pods-MailServiceKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MailServiceKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				F7E9298B9AFB38A23AEBC448794354C7 /* MailService.swift */,
 				CE6B8AF7FDCDDAEFEBA0F57B8313D5A7 /* SendinblueService.swift */,
+				96DC52B32019DA59002B80C4 /* MailchimpService.swift */,
 				96EA9E522018B52000218CD2 /* Keychain.swift */,
 				2E121F9161835BE955972F1567CD20A5 /* Support Files */,
 			);
@@ -330,6 +333,7 @@
 				59CB730ABCE0A0C23A3D9A11895B4262 /* MailService.swift in Sources */,
 				96EA9E532018B52000218CD2 /* Keychain.swift in Sources */,
 				6AEA042836BD56F1E88211C87B116650 /* MailServiceKit-dummy.m in Sources */,
+				96DC52B42019DA59002B80C4 /* MailchimpService.swift in Sources */,
 				805C462D2744C3CD9872E121AE4BCE89 /* SendinblueService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

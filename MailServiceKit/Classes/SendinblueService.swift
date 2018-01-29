@@ -29,11 +29,12 @@ internal class SendinblueService {
         params["replyTo"] = ["email": sender.email]
         
         // create request
+        print(URL(string: SendinblueService.api + "smtp/email"))
         var request = URLRequest(url: URL(string: SendinblueService.api + "smtp/email")!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue(apiKey, forHTTPHeaderField: "api-key")
+        request.httpMethod = "POST"
         
-        print(params)
         // parse JSON
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params)
@@ -43,9 +44,6 @@ internal class SendinblueService {
         
         // URLSession > send request to server
         URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
-            print(response)
-            print(data)
-            print(error)
             
             do {
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
@@ -67,7 +65,6 @@ internal class SendinblueService {
         // URLSession > send request to server
         URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
                 completion(error, jsonData)
             } catch let e {
@@ -86,7 +83,6 @@ internal class SendinblueService {
         // URLSession > send request to server
         URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
                 completion(error, jsonData)
             } catch let e {
@@ -105,7 +101,6 @@ internal class SendinblueService {
         // URLSession > send request to server
         URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
                 completion(error, jsonData)
             } catch let e {
@@ -124,7 +119,6 @@ internal class SendinblueService {
         // URLSession > send request to server
         URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
                 completion(error, jsonData)
             } catch let e {
@@ -144,7 +138,11 @@ internal class SendinblueService {
             params["attributes"] = userAttributes
         }
         if let subscriptionLists = lists {
-            params["listid"] = subscriptionLists
+            var arr: [Int] = []
+            for listID in subscriptionLists {
+                arr.append((Int(listID)!))
+            }
+            params["listIds"] = arr
         }
         
         
@@ -164,7 +162,6 @@ internal class SendinblueService {
         // URLSession > send request to server
         URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
                 completion(error, jsonData)
             } catch let e {
@@ -201,7 +198,6 @@ internal class SendinblueService {
         // URLSession > send request to server
         URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 if String(data: data!, encoding: String.Encoding.utf8) != "" {
                     let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
                     completion(error, jsonData)
@@ -213,4 +209,42 @@ internal class SendinblueService {
             }.resume()
     }
     
+    
+    class func updateContactSubscription(apiKey: String, email: String, subscribe: Bool, list: String, completion: @escaping (_ error: Error?, _ result: Dictionary<String, Any>?) -> Void) {
+
+        var params = [String: Any]()
+        params["emails"] = [email]
+        
+        // create request
+        let urlString = SendinblueService.api + "contacts/lists/" + list + "/contacts/"
+        var request = URLRequest(url: URL(string: urlString)!)
+        if subscribe == true {
+            request.url = URL(string: urlString + "add")!
+        } else {
+            request.url = URL(string: urlString + "remove")!
+        }
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(apiKey, forHTTPHeaderField: "api-key")
+        
+        // parse JSON
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: params)
+        } catch let error {
+            completion(error, nil)
+        }
+        
+        // URLSession > send request to server
+        URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            do {
+                if String(data: data!, encoding: String.Encoding.utf8) != "" {
+                    let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any]
+                    completion(error, jsonData)
+                }
+                completion(error, nil)
+            } catch let e {
+                completion(e, nil)
+            }
+            }.resume()
+    }
 }

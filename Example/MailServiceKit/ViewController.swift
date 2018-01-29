@@ -20,38 +20,50 @@ class ViewController: UIViewController {
         let sendinblue = MailService(provider: .sendinblue)
         
         // Send transactional emails
-        sendinblue.sendEmail(sender: MailContact(email: "test@test.com", fullname: "Josef Moser"),
-                              recipients: [MailContact(email: "test@josefmoser.de", fullname: "Josef Moser")],
-                              subject: "Test",
-                              content: "This is a test email sent from MailServiceKit") { (error, result) in
-                                print(error)
-                                print(result)
-        }
+//        sendinblue.sendEmail(sender: MailContact(email: "test@test.com", fullname: "Josef Moser"),
+//                              recipients: [MailContact(email: "test@test.com", fullname: "Josef Moser")],
+//                              subject: "Test",
+//                              content: "This is a test email sent from MailServiceKit") { (error, result) in
+//                                print(error)
+//                                print(result)
+//        }
         
         // Contact Management
-        //        mailservice.getContacts { (error, result) in
-        //            print(error)
-        //            print(result)
-        //        }
-        //        mailservice.getContact(email: "test@josefmoser.de") { (error, result) in
-        //            print(error)
-        //            print(result)
-        //        }
-        //        mailservice.updateContact(email: "test2@josefmoser.de", attributes: nil, lists: ["4"]) { (error, result) in
-        //            print(error)
-        //            print(result)
-        //        }
+//        sendinblue.addContact(email: "test@josefmoser.de", attributes:nil, lists: ["4"]) { (error, result) in
+//            print(error)
+//            print(result)
+//        }
+//                sendinblue.getContacts { (error, result) in
+//                    print(error)
+//                    print(result)
+//                }
+//                sendinblue.getContact(email: "test@test.com") { (error, result) in
+//                    print(error)
+//                    print(result)
+//                }
+//                sendinblue.updateContact(email: "test@test.com", attributes: nil, lists: ["4"]) { (error, result) in
+//                    print(error)
+//                    print(result)
+//                }
+        
+        sendinblue.subscribeContact(email: "test@test.com", list: "4") { (error, result) in
+            //
+        }
+        
+        sendinblue.unsubscribeContact(email: "test@test.com", list: "5") { (error, result) in
+            //
+        }
         
         
         // List Management
-        //        mailservice.getLists { (error, result) in
-        //            print(error)
-        //            print(result)
-        //        }
-        //        mailservice.getList(id: 4) { (error, result) in
-        //            print(error)
-        //            print(result)
-        //        }
+//                sendinblue.getLists { (error, result) in
+//                    print(error)
+//                    print(result)
+//                }
+//                sendinblue.getList(id: 4) { (error, result) in
+//                    print(error)
+//                    print(result)
+//                }
     }
     
     override func didReceiveMemoryWarning() {
